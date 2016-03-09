@@ -5,8 +5,20 @@
         <div id="container">
             <div id="welcome">
                 <h1>Yo!</h1>
-            </div>
+				{% block title %}
+					Something
+				{% endblock title %}
+				{% block links %}
 
+					Content of the page...
+				{% endblock %}
+            </div>
+            {% include 'links.html.twig' %}
+            {% include 'link/edit.html.twig' %}
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 {% endblock %}
